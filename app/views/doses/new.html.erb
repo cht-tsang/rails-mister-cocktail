@@ -1,9 +1,15 @@
-<h1>Enter dose for <%= @cocktail.name %></h1>
+<div class="form-container">
+  <div class="form-elements">
 
-<%= simple_form_for([@cocktail, @dose]) do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.submit class: "btn btn-success" %>
-<% end %>
+    <h1>Enter dose for <%= @cocktail.name %></h1>
 
-<%= link_to 'Back', cocktail_path(@cocktail) %>
+    <%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit class: "btn btn-primary" %>
+    <% end %>
+
+    <button type="button" class="btn btn-outline-primary back-btn"><%= link_to 'Back', cocktail_path(@cocktail) %></button>
+
+  </div>
+</div>

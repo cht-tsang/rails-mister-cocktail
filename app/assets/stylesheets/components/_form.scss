@@ -1,0 +1,23 @@
+.form-elements {
+  color: white;
+  font-family: 'Special Elite', cursive;
+  
+  text-align: center;
+}
+
+.form-elements h1 {
+  font-family: 'Special Elite', cursive;
+}
+
+.back-btn {
+  margin: 10px;
+}
+
+.form-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
