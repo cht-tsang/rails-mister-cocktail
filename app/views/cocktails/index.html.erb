@@ -4,6 +4,10 @@
   </div>
 </div>
 
+<div>
+<iframe src="https://open.spotify.com/embed/track/5IMtdHjJ1OtkxbGe4zfUxQ" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+
 <div class="cards">
   <% @cocktails.each do |cocktail| %>
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
@@ -15,3 +19,16 @@
 <%= cl_image_tag('tnth9jkdygbhyokrwpvx', width: 400, height: 300, crop: :fill) %>
 
 <%= link_to 'New COCKTAIL', new_cocktail_path %>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
