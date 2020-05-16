@@ -1,34 +1,30 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-color: rgba(255,255,255,0.5);">
   <div class="container">
-    <h1>Cocktails Galore!!!</h1>
+    <h1>You came for the cocktails but stayed for the music.</h1>
   </div>
-</div>
-
-<div>
-<iframe src="https://open.spotify.com/embed/playlist/098VClc6SQunLgJ0x0jTTr" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <div id="music-box">
+    <iframe src="https://open.spotify.com/embed/playlist/098VClc6SQunLgJ0x0jTTr" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </div>
+  <button type="button" class="btn btn-outline-primary btn-lg"><%= link_to 'New COCKTAIL', new_cocktail_path %></button>
 </div>
 
 <div class="cards">
   <% @cocktails.each do |cocktail| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <%= cocktail.name %> - <%= link_to 'Show', cocktail %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+      <%= link_to cocktail.name, cocktail %>
     </div>
   <% end %>
 </div>
 
-<%= cl_image_tag('tnth9jkdygbhyokrwpvx', width: 400, height: 300, crop: :fill) %>
-
-<%= link_to 'New COCKTAIL', new_cocktail_path %>
-
-<div class="footer">
+<div class="footer" style="background-color: rgba(255,255,255,0.5);">
   <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/chi-tsang-779aa11a9/" target="_blank"><i class="fab fa-linkedin"></i></a>
   </div>
   <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    You clearly <i class="fas fa-heart"></i> to drink.
   </div>
 </div>
